@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <header class="container mt-5">
+        <h1 class="text-center">Welcome to my Phone Hunter!</h1>
+    </header>
+    <section class="container mt-5">
+        <div class="d-flex justify-content-end gap-3">
+            <input id="search-field" class="form-control w-25" type="text" placeholder="Choose your phone">
+            <button id="btn-search" class="btn btn-dark">Search</button>
+        </div>
+    </section>
+    
+    <main class="container mt-5 mb-5">
+
+        <!-- display search result -->
+        <section>
+            <div id="phones-container" class="row row-cols-1 row-cols-md-4 g-3">
+
+            </div>
+
+            <!-- No content found -->
+            <div id="no-found-message" class="d-none mt-4">
+                <h3 class="text-warning text-center">No content found. Please try again..</h3>
+            </div>
+
+            <div id="show-more" class="d-none text-center mt-5">
+                <button id="show-more-btn" class="btn btn-primary">Show More</button>
+            </div>
+        </section>
+
+        <!-- loader -->
+        <section id="loader" class="container d-none">
+            <div style="height: 400px" class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- modal content -->
+        <section>
+            <!-- Modal -->
+            <div class="modal fade" id="phone-details-modal" tabindex="-1" aria-labelledby="phone-details-modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                           <h1 class="modal-title fs-5" id="phone-details-modalLabel">Modal title</h1>
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        
+                        <div id="phone-detals-body" class="modal-body">
+                        </div>
+
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
