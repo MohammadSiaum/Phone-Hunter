@@ -119,7 +119,7 @@ const displayPhoneDetails = phone => {
         <p>Memory : ${phone.mainFeatures ? phone.mainFeatures.memory : 'No memory details found'}</p>
         <p>Display Size : ${phone.mainFeatures ? phone.mainFeatures.displaySize : 'No display size info found'}</p>
         <p>Release Date : ${phone.releaseDate ? phone.releaseDate : 'No release date found'}</p>
-        <p>Sensor : ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors[0] : 'No sensor info found'}, ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors[1] : 'No sensor info found'}</p>
+        <p>Sensor : ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors[0] : 'No sensor info found'}, ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors[1] : 'No sensor info found'}, ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors[5] : 'No sensor info found'}</p>
         <p>Bluetooth : ${phone.others ? phone.others.Bluetooth : 'No found about it'} </p>
         <p>WLAN : ${phone.others ? phone.others.WLAN : 'No found about it'} </p>
         <p>USB : ${phone.others ? phone.others.USB : 'No found about it'} </p>
