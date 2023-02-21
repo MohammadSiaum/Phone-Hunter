@@ -101,7 +101,7 @@ document.getElementById('show-more-btn').addEventListener('click', function(){
 });
 
 const loadPhoneDetails = async(id) => {
-    const url = ` https://openapi.programming-hero.com/api/phone/${id}`;
+    const url = `https://openapi.programming-hero.com/api/phone/${id}`;
     const res = await fetch(url);
     const data = await res.json();
     displayPhoneDetails(data.data);
@@ -113,6 +113,8 @@ const displayPhoneDetails = phone => {
     modalTitle.innerText = phone.name;
     
     const phoneDetailsBody = document.getElementById('phone-detals-body');
+    phoneDetailsBody.style.backgroundColor = '#282A35';
+    phoneDetailsBody.style.color = 'lightgray';
     phoneDetailsBody.innerHTML = `
         <h6>Brand : ${phone.brand ? phone.brand : 'No found brand'}</h6>
         <p>Chip Set : ${phone.mainFeatures ? phone.mainFeatures.chipSet : 'No chip set info found'}</p>
